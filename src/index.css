@@ -2,13 +2,10 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  font-size:large;
-
+  font-size: large;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  font-size:large;
-
+  color: rgba(14, 12, 12, 0.87);
+  background-color: #f5e4e4;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,20 +13,21 @@
 }
 
 body {
-  margin: 100px;
-  padding :100px;
+  margin: 0;
+  padding: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color:rgba(82, 170, 82, 0.452);
-  font-size:larger
-  
+  background-color: rgba(240, 190, 116, 0.692);
+  font-size: larger;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin-bottom: 1rem;
 }
 
 button {
@@ -39,12 +37,14 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #f07c2f;
+  color: rgb(22, 21, 21);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #707291;
+  background-color: #9c8787;
 }
 button:focus,
 button:focus-visible {
@@ -61,49 +61,52 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+    color: #f09f9f;
   }
 }
 
 .p-2 {
   padding: 0.5rem;
-  height:150%;
-  width:50%;
+  height: auto;
+  width: 100%;
 }
 
-.custom-table {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  border:1px solid #ccc;
-  border-collapse:collapse;
-  width:100%;
-  font-family:Arial, sans-serif;
-  
-  }
+.custom-table,
+.Expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
 
-.custom-table td {
+.custom-table th,
+.custom-table td,
+.Expense-table th,
+.Expense-table td {
+  border: 1px solid #ccc;
   padding: 12px;
   text-align: left;
-  border: 1px solid #ccc;
 }
- .no-data-row td {
+
+.no-data-row td {
   text-align: center;
-  font-style: italic; 
-  color:#999;
-  background-color:#f9f9f9
- }
- .Expense-table {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  border:1px solid #ccc;
-  border-collapse:collapse;
-  width:100%;
-  font-family:Arial, sans-serif;
-  
-  }
+  font-style: italic;
+  color: #797171;
+  background-color: #f9f9f9;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
 
 
  
